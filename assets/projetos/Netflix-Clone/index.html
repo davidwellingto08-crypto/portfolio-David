@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX CLONE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>NETFLIX</h1>
+
+        <input 
+            type="text"
+            id="search"
+            placeholder="Buscar filme...">
+    </header>
+
+    <section id="banner">
+        
+        <div class="banner-content">
+            <h2 id="banner-title"></h2>
+            <p id="banner-overview"></p>
+        </div>
+    </section>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span id="close">&times;</span>
+        <iframe id="video"
+    width="100%"
+    height="400"
+    src=""
+    frameborder="0"
+    allow="autoplay; encrypted-media; fullscreen"
+    allowfullscreen>
+</iframe>
+    </div>
+</div>
+
+    <main id="movies"></main>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
