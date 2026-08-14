@@ -1,0 +1,310 @@
+
+/* ==============================
+   CURRÍCULO
+============================== */
+
+.curriculo-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 120px auto 60px;
+}
+
+
+/* ==============================
+   TOPO
+============================== */
+
+.curriculo-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    margin-bottom: 30px;
+
+    background: #111116;
+    border: 1px solid #24242c;
+    border-radius: 15px;
+}
+
+.curriculo-topo h1 {
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+
+.curriculo-topo h2 {
+    color: #ff0000;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.curriculo-topo p {
+    max-width: 700px;
+    color: #bdbdc5;
+}
+
+
+/* ==============================
+   BOTÕES
+============================== */
+
+.curriculo-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 190px;
+}
+
+.btn-curriculo,
+.btn-voltar {
+    border: none;
+    padding: 13px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-curriculo {
+    background: linear-gradient(45deg, #ff0000, #b30000);
+    color: #ffffff;
+}
+
+.btn-curriculo:hover {
+    transform: translateY(-2px);
+}
+
+.btn-voltar {
+    border: 1px solid #ff0000;
+    color: #ffffff;
+}
+
+.btn-voltar:hover {
+    background: #ff0000;
+}
+
+
+/* ==============================
+   SEÇÕES
+============================== */
+
+.curriculo-secao {
+    background: #111116;
+    border: 1px solid #24242c;
+    border-radius: 15px;
+    padding: 35px;
+    margin-bottom: 25px;
+}
+
+.curriculo-secao h3 {
+    color: #ff0000;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #292932;
+    padding-bottom: 10px;
+}
+
+.curriculo-secao h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.curriculo-secao p {
+    color: #c5c5cc;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.curriculo-secao ul {
+    padding-left: 20px;
+    color: #c5c5cc;
+}
+
+.curriculo-secao li {
+    margin-bottom: 7px;
+}
+
+
+/* ==============================
+   CONTATO
+============================== */
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.contato-grid p {
+    margin: 0;
+}
+
+.contato-grid a {
+    color: #ff0000;
+}
+
+.contato-grid a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   HABILIDADES
+============================== */
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.habilidades span {
+    padding: 9px 15px;
+    border-radius: 20px;
+    background: #1c1c23;
+    border: 1px solid #30303a;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   PROJETOS
+============================== */
+
+.projeto-curriculo {
+    padding: 25px 0;
+    border-bottom: 1px solid #292932;
+}
+
+.projeto-curriculo:last-child {
+    border-bottom: none;
+}
+
+.projeto-curriculo h4 {
+    color: #ffffff;
+}
+
+.projeto-curriculo strong {
+    color: #ffffff;
+}
+
+
+/* ==============================
+   EXPERIÊNCIA
+============================== */
+
+.experiencia {
+    padding-top: 5px;
+}
+
+.experiencia-tags {
+    margin-top: 20px;
+}
+
+
+/* ==============================
+   RESPONSIVO
+============================== */
+
+@media (max-width: 768px) {
+
+    .curriculo-container {
+        width: 92%;
+        margin-top: 100px;
+    }
+
+    .curriculo-topo {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+    }
+
+    .curriculo-topo h1 {
+        font-size: 32px;
+    }
+
+    .curriculo-topo h2 {
+        font-size: 19px;
+    }
+
+    .curriculo-acoes {
+        width: 100%;
+    }
+
+    .curriculo-secao {
+        padding: 25px 20px;
+    }
+
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ==============================
+   IMPRESSÃO / PDF
+============================== */
+
+@media print {
+
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+    }
+
+    .header,
+    .footer,
+    .curriculo-acoes {
+        display: none !important;
+    }
+
+    .curriculo-container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .curriculo-topo,
+    .curriculo-secao {
+        background: #ffffff !important;
+        color: #000000 !important;
+        border: none;
+        padding: 15px 0;
+        margin-bottom: 10px;
+    }
+
+    .curriculo-topo h1,
+    .curriculo-secao h4 {
+        color: #000000 !important;
+    }
+
+    .curriculo-topo h2,
+    .curriculo-secao h3 {
+        color: #b00000 !important;
+    }
+
+    .curriculo-topo p,
+    .curriculo-secao p,
+    .curriculo-secao li,
+    .habilidades span {
+        color: #000000 !important;
+    }
+
+    .habilidades span {
+        background: #eeeeee !important;
+        border: 1px solid #cccccc;
+    }
+
+    .projeto-curriculo {
+        page-break-inside: avoid;
+    }
+
+    .curriculo-secao {
+        page-break-inside: avoid;
+    }
+
+}
+
